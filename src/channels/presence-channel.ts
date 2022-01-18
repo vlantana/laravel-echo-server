@@ -150,9 +150,12 @@ export class PresenceChannel {
      * On join event handler.
      */
     onJoin(socket: any, channel: string, member: any): void {
-        this.io.sockets.connected[socket.id].broadcast
+        if(this.io.sockets.connected[socket.id]) {
+            this.io.sockets.connected[socket.id].broadcast
             .to(channel)
             .emit("presence:joining", channel, member);
+        }
+        
     }
 
     /**
