@@ -1,4 +1,9 @@
+# LATIS Fork
+
+This is a fork to merge in some PRs from other folks. To publish, run npm install, npm run prepublish, then `npm publish --access public` (remember to rev your version)
+
 # Laravel Echo Server
+
 
 NodeJs server for Laravel Echo broadcasting with Socket.io.
 
